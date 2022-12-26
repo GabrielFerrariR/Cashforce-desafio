@@ -6,6 +6,7 @@
   "scripts": {
     "start": "node .",
     "dev": "nodemon ./src/server.ts",
+    "test": "mocha -r ts-node/register tests/unit/**/*.test.ts --verbose",
     "test:integration": "mocha -r ts-node/register tests/integration/**/*.test.ts --verbose"
   },
   "author": "Gabriel Ferrari",
