@@ -2,8 +2,10 @@
 import { Router } from 'express';
 import OrderService from '../services/Orders.service';
 import OrderController from '../controllers/Order.controller';
+import Orders from '../models/Orders';
 
-const service = new OrderService();
+const model = new Orders();
+const service = new OrderService(model);
 const controller = new OrderController(service);
 
 const router = Router();
