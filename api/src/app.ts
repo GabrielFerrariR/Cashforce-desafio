@@ -1,16 +1,14 @@
 import express from 'express';
 import 'express-async-errors';
 import cors from 'cors';
+import OrdersRoute from './Routes/Orders.route';
 
 class App {
   server;
   constructor() {
     this.server = express();
     this.middleWares();
-    // this.routes();
-    this.server.get('/', (req, res, _next) => {
-      res.status(200).json({ message: 'teste de rota'}); 
-    });
+    this.routes();
   }
 
   middleWares() {
@@ -19,7 +17,7 @@ class App {
   }
 
   routes() {
-    throw Error('Not implemented');
+    this.server.use('/orders', OrdersRoute);
   }
 }
 
