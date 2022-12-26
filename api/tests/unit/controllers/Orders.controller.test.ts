@@ -21,7 +21,7 @@ describe('Orders controller layer', () => {
     beforeEach(async () => {
       res.status = sinon.stub().returns(res);
       res.json = sinon.stub().returns(res);
-      sinon.stub(service, 'read' ).resolves([getOrdersResponse] as unknown as orders[])
+      sinon.stub(service, 'read' ).resolves(getOrdersResponse as unknown as orders[])
     });
 
     afterEach(sinon.restore);
@@ -38,7 +38,7 @@ describe('Orders controller layer', () => {
       await controller.read(req, res, next);
 
       const jsonStub = res.json as sinon.SinonStub;
-      expect(jsonStub.calledWith([getOrdersResponse])).to.be.true;
+      expect(jsonStub.calledWith(getOrdersResponse)).to.be.true;
     });
   })
 })
