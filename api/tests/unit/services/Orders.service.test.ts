@@ -4,7 +4,6 @@ const { expect } = chai;
 import OrderService from '../../../src/services/Orders.service'
 import {getOrdersResponse} from '../../mocks'
 
-import { Request, Response} from 'express';
 import Orders from "../../../src/models/Orders";
 import { orders } from "../../../src/database/models/orders";
 

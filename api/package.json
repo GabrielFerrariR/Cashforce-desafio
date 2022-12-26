@@ -7,7 +7,8 @@
     "start": "node .",
     "dev": "nodemon ./src/server.ts",
     "test": "mocha -r ts-node/register tests/unit/**/*.test.ts --verbose",
-    "test:integration": "mocha -r ts-node/register tests/integration/**/*.test.ts --verbose"
+    "test:integration": "mocha -r ts-node/register tests/integration/**/*.test.ts --verbose",
+    "test:coverage": "nyc mocha -r ts-node/register tests/**/**/*.test.ts"
   },
   "author": "Gabriel Ferrari",
   "license": "ISC",
@@ -41,6 +42,7 @@
     "eslint-plugin-promise": "^6.1.1",
     "mocha": "^10.2.0",
     "nodemon": "^2.0.20",
+    "nyc": "^15.1.0",
     "sinon": "^15.0.1",
     "ts-jest": "^29.0.3",
     "ts-node": "^10.9.1",
