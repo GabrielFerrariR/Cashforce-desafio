@@ -19,7 +19,7 @@
     "paths": {
       "*": ["node_modules/*"]
     },
-    "types": ["node"]
+    "types": ["node", "mocha"]
   },
-  "include": ["src/**/*", "tests/**/*.ts"],
+  "include": ["src/**/*"],
 }
