@@ -15,7 +15,7 @@
 <style scoped>
   section {
     height: 100vh;
-    width: 20%;
+    width: 18rem;
     background-color: #FBFDFE;
   }
 
@@ -50,10 +50,12 @@
 
   .nav-option-container:hover .p-medium {
     color: #00AD8C;
+    transition: 0.5s;
   }
 
   .nav-option-container:hover .menu-icon {
     fill: #00AD8C;
+    transition: 0.5s;
   }
 
 </style>
