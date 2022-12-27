@@ -1,0 +1,47 @@
+/* h3 bold */
+h3 {
+  color: #021B51;
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1.5rem;
+  line-height: 28px;
+}
+/* p medium */
+.p-medium {
+  color: #4D5566;
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 0.875em;
+  line-height: 18px;
+}
+
+/* p regular */
+.p-regular {
+  color: #727D94;
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 0.875em;
+  line-height: 18px;
+}
+
+.p-12-bold {
+  font-family: 'DM Sans';
+  font-size: 0.75em;
+  font-weight: 700;
+  line-height: 1em;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+.caption {
+  font-family: 'DM Sans';
+  font-size: 0.75em;
+  font-weight: 700;
+  line-height: 1em;
+  letter-spacing: 0em;
+  text-align: left;
+  text-transform: uppercase;
+}
