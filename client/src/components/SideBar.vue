@@ -39,8 +39,8 @@
 
   .nav-option-container:hover span {
     width: 0.25rem;
-    background-color: #00AD8C;
-    height: 100%;
+    background-color: var(--secondary);
+    height: 4rem;
     position: absolute;
     left: 0;
     right: 0;
@@ -49,12 +49,12 @@
   }
 
   .nav-option-container:hover .p-medium {
-    color: #00AD8C;
+    color: var(--secondary);
     transition: 0.5s;
   }
 
   .nav-option-container:hover .menu-icon {
-    fill: #00AD8C;
+    fill: var(--secondary);
     transition: 0.5s;
   }
 

@@ -1,6 +1,6 @@
 /* h3 bold */
 h3 {
-  color: #021B51;
+  color: var(--title);
   font-family: 'DM Sans';
   font-style: normal;
   font-weight: 700;
@@ -19,7 +19,7 @@ h3 {
 
 /* p regular */
 .p-regular {
-  color: #727D94;
+  color: var(--primary);
   font-family: 'DM Sans';
   font-style: normal;
   font-weight: 400;
@@ -28,6 +28,7 @@ h3 {
 }
 
 .p-12-bold {
+  color: var(--primary);
   font-family: 'DM Sans';
   font-size: 0.75em;
   font-weight: 700;
@@ -37,11 +38,16 @@ h3 {
 }
 
 .caption {
+  color: #A1A8B8;
   font-family: 'DM Sans';
   font-size: 0.75em;
   font-weight: 700;
   line-height: 1em;
   letter-spacing: 0em;
-  text-align: left;
   text-transform: uppercase;
+  text-align: left;
+}
+
+.value {
+  color: var(--secondary);
 }
