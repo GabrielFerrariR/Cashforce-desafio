@@ -81,3 +81,14 @@ npm run dev
 Se todo ocorreu como esperado, a aplicação estará rodando no endereço [http://localhost:3000/](http://localhost:3000/).
 
 </details>
+<br>
+
+## Executando testes
+
+Na pasta api:
+
+```bash
+npm test ## verifica os testes unitários
+npm run test:coverage ## verifica a cobertura de testes
+npm run test:integration ## verifica os testes de integração
+```
