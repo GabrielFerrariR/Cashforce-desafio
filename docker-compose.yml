@@ -1,0 +1,55 @@
+version: '3.9'
+services:
+  client:
+    build: ./client
+    ports:
+      - 3000:3000
+    working_dir: /client
+    volumes: 
+      - ./client/:/client/
+    depends_on:
+      api:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "lsof", "-t", "-i:3000"]
+      timeout: 10s
+      retries: 5
+  api:
+    container_name: api
+    build: ./api
+    ports:
+      - 3001:3001
+    working_dir: /api
+    volumes: 
+      - ./api/:/api/
+    depends_on:
+      db:
+        condition: service_healthy
+    environment:
+      - API_PORT=3001
+      - DB_USER=root
+      - DB_PASS=root
+      - DB_HOST=db
+      - DB_PORT=3306
+    healthcheck:
+      test: ["CMD", "lsof", "-t", "-i:3001"]
+      timeout: 10s
+      retries: 5
+  db:
+    image: mysql:8.0.21
+    container_name: db
+    platform: linux/x86_64
+    ports:
+      - 3002:3306
+    command: --default-authentication-plugin=mysql_native_password
+    volumes:
+      - "./scripts/database.sql:/docker-entrypoint-initdb.d/1.sql"
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+    restart: 'always'
+    healthcheck:
+      test: ["CMD", "mysqladmin" ,"ping", "-h", "localhost"]
+      timeout: 10s
+      retries: 5
+    cap_add:
+      - SYS_NICE
