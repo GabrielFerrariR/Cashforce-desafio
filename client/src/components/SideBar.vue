@@ -3,7 +3,7 @@
 
 <template>
   <section>
-    <img src="src/assets/menu-hero.svg" class="hero-icon" alt="cash force" />
+    <img src="src/assets/menu-hero.svg" class="hero-icon" alt="cashforce" />
     <div class="nav-option-container">
       <span/>
       <img src="src/assets/nficon.svg" alt="notas fiscais" class="menu-icon">
