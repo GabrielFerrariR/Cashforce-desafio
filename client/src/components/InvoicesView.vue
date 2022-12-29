@@ -23,9 +23,9 @@ onMounted(() => {
     </header>
     <table>
       <tr class="header-row">
-        <th class="caption" v-for="item in orderTableHeaders">{{ item }}</th>
+        <th class="caption" v-for="item, index in orderTableHeaders" v-bind:key="index">{{ item }}</th>
       </tr>
-      <tr v-for="item in data" class="p-medium">
+      <tr v-for="item, index in data" class="p-medium" v-bind:key="index">
         <td>{{ item.nNf}}</td>
         <td>{{ item.buyer?.name }}</td>
         <td>{{ item.provider?.name}}</td>
@@ -73,12 +73,12 @@ onMounted(() => {
     border-collapse: separate;
     border-spacing: 1rem;
   }
-  
+
   tr {
     outline: thin solid var(--borders);
     border-radius: 6px;
   }
-  
+
   td, th {
     padding: 0.4rem;
   }
